@@ -55,7 +55,7 @@ const EventFetch = (props) => {
 
   return (
     <div className="App">
-        <h3>Welcome to TicketMaster</h3>
+        <h1>Welcome to TicketMaster</h1>
         <Container>
           <Row>
             <table>

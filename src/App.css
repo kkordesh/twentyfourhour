@@ -1,19 +1,31 @@
 
+  .nasa {
+    background-color: #d3d3d3; padding:15px; margin: 10px; margin-left: 200px; margin-right: 200px; margin-bottom: 20px;
+  }
 
 .weather {
-  background-color: #d3d3d3; padding:15px; margin: 10px; margin-left: 500px; margin-right: 500px; 
+  background-color: #d3d3d3; padding:15px; margin: 10px; margin-left: 200px; margin-right: 200px; margin-bottom: 20px;
 
 }
 
-.nasa {
-  background-color: #d3d3d3; padding: 15px; margin: 10px; margin-left: 400px; margin-right: 400px;
+
+.ticket {
+  background-color: #d3d3d3; padding:15px; margin: 10px; margin-left: 200px; margin-right: 200px; margin-bottom: 20px; 
+  
+}
+
+tr {
+  text-align: center; 
+  margin-left: 50px; 
+  font-family:'Times New Roman', Times, serif;
+  color: darkgreen;
 }
 
 .nasaimg {
   height: 250px;
   width: 250px; 
   display: flex; 
-  margin-left: 90px; 
+  margin-left: 290px; 
   padding: 10px; 
 }
 
@@ -31,6 +43,8 @@ h1 {
 
 p {
 text-align: center;
+font-family:'Times New Roman', Times, serif;
+color: darkgreen
 }
 
 body {

@@ -20,17 +20,28 @@ function App() {
 
   return (
     <div>
-      <EventFetch lat={lat}
-     lon={lon}
-/>
+    
+        <div className='nasa'>
+        <Nasa lat={lat}
+        lon={lon}/> </div> 
+
       <div className='weather'>
       <Weather lat={lat}
      lon={lon}/> 
      </div>
-     <div className='nasa'>
-     <Nasa lat={lat}
-     lon={lon}/> </div> 
+
+
+
+    <div className='ticket'>
+      <EventFetch  lat= {lat}
+      lon={lon}/>
     </div>
+
+
+    </div>
+
+
+
   );
 }
 
