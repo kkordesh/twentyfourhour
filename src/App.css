@@ -1,4 +1,93 @@
-.App {
+
+  .nasa {
+    background-color: #d3d3d3; padding:15px; margin: 10px; margin-left: 200px; margin-right: 200px; margin-bottom: 20px;
+  }
+
+.weather {
+  background-color: #d3d3d3; padding:15px; margin: 10px; margin-left: 200px; margin-right: 200px; margin-bottom: 20px;
+
+}
+
+
+.ticket {
+  background-color: #d3d3d3; padding:15px; margin: 10px; margin-left: 200px; margin-right: 200px; margin-bottom: 20px; 
+  
+}
+
+tr {
+  text-align: center; 
+  margin-left: 50px; 
+  font-family:'Times New Roman', Times, serif;
+  color: darkgreen;
+}
+
+.nasaimg {
+  height: 250px;
+  width: 250px; 
+  display: flex; 
+  margin-left: 290px; 
+  padding: 10px; 
+}
+
+h1 {
+  color: darkgreen;
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+  background-color: white;
+  padding: .75 rem 0;
+  border: solid 2px #000000; 
+  position: relative;
+  object-position: 20px;
+
+}
+
+p {
+text-align: center;
+font-family:'Times New Roman', Times, serif;
+color: darkgreen
+}
+
+body {
+  background-image: url(./assets/bg.jpg.jpg);
+  background-size: 100%;
+}
+
+button {
+  background-color: green;
+  color: white; 
+  border-radius: 50px; 
+  text-align: center;
+  display: inline-block; 
+  object-position: 20px;
+  margin: auto; 
+  display: flex; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +124,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+}  */
