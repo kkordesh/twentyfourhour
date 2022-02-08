@@ -23,7 +23,7 @@ const fetchResults = () => {
 
     
 
-    let url =  `https://api.nasa.gov/planetary/earth/imagery?lon=${lon}&lat=${lat}&date=2021-02-07&api_key=${key}&dim=.5`
+    let url =  `https://api.nasa.gov/planetary/earth/imagery?lon=${lon}&lat=${lat}&date=2020-02-07&api_key=${key}&dim=.5`
     
     fetch(url)
     // fetch("https://api.nasa.gov/planetary/earth/imagery?lon=100.75&lat=1.5&date=2014-02-01&api_key=1S6mGpqYmXLPl5kyQlvCibXVZYtq9Rb6hx6qxguF&dim=.5")
@@ -46,8 +46,8 @@ const fetchResults = () => {
    };
 
     return ( <div>
-        <h1>Hello from nasa</h1>
-        <img src={results} />
+        <h1>Your Location:</h1>
+        <img class="nasaimg" src={results} />
         <button type="submit" onClick={handleSubmit}>Find my location</button>
     </div> );
 }

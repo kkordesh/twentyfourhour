@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Weather from './Weather';
 import Nasa from './Nasa'
 import React, { useState, useEffect } from 'react';
 
@@ -19,8 +20,13 @@ function App() {
 
   return (
     <div>
-     <Nasa lat={lat}
+      <div className='weather'>
+      <Weather lat={lat}
      lon={lon}/> 
+     </div>
+     <div className='nasa'>
+     <Nasa lat={lat}
+     lon={lon}/> </div> 
     </div>
   );
 }
