@@ -8,8 +8,7 @@ import React, { useState, useEffect } from 'react';
 const Weather = (props) => {
     const [temperature, setTemperature] = useState("Loading");
     const APIkey = '0612bf7b9f4f9c659b0ac1ed09a1c920'
-    const lat = 39.768402
-    const lon = -86.158066
+    const {lat, lon} = props
     const [isFahrVisible, setisFahrVisible] = useState(true);
     let celsius = Math.floor (temperature - 273);
     let fahrenheit = Math.floor (celsius * (9/5) + 32);
@@ -17,6 +16,9 @@ const Weather = (props) => {
         setisFahrVisible(!isFahrVisible)
     }
     async function fetchWeather() {
+        if (!lat || !lon){
+            return
+        }
         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}`
         try {
             const response = await fetch(url);
@@ -29,9 +31,9 @@ const Weather = (props) => {
     }
     useEffect (() => {
         fetchWeather()
-    }, []);
+    });
     return ( <div>
-        <h1>Hello From Weather</h1>
+        <h1>Current Temperature Based On Your Location:</h1>
         {isFahrVisible === true ? <p>Temperature in Fahrenheit: {fahrenheit}</p> : <p>Temperature in Celsius: {celsius}</p>}
             <button id='tempType' onClick={(handleToggle)}>Click for Temp</button>
     </div> );
