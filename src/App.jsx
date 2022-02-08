@@ -20,10 +20,13 @@ function App() {
 
   return (
     <div>
+      <div className='weather'>
       <Weather lat={lat}
-     lon={lon}/>
-     <Nasa lat={lat}
      lon={lon}/> 
+     </div>
+     <div className='nasa'>
+     <Nasa lat={lat}
+     lon={lon}/> </div> 
     </div>
   );
 }
