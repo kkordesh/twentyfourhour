@@ -6,8 +6,8 @@ const key = 'PeCT8Lr36j8qgfWx3zqAQQeywUfNUvOc';
 
 const EventFetch = (props) => {
 
-  const lat = 39.970406
-  const lon = -85.966848
+  const {lat, lon} = props
+
   const url = `https://app.ticketmaster.com/discovery/v2/events.json?latlong=${lat},${lon}&apikey=${key}`
   
 
@@ -20,18 +20,24 @@ const EventFetch = (props) => {
   // const [latitude, setLatitude] = useState('');
 
   const eventMapper = () => {
+    
     return fetchEvents.map((event, index) =>{
+      
       return(
         <tr key={index}>
           <td scope='row'>{event.name}</td>
           <td scope='row'>{event.type}</td>
           <td scope='row'>{event.dates.start.localDate}</td>
         </tr>
+        
       )
     }
     )
   }
   useEffect(() => {
+    if (!lat || !lon){
+      return
+  }
     fetch(url)
     .then((res) => {
       return res.json()
@@ -45,7 +51,7 @@ const EventFetch = (props) => {
     // setLongitude(data._embedded.events[0]._embedded.venue.location.longitude);
     // setLatitude(data._embedded.events[0]._embedded.venue.location.latitude);
     });
-   }, []);
+   });
 
   return (
     <div className="App">
