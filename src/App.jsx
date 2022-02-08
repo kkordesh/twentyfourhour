@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import EventFetch from './TicketMaster';
 import Weather from './Weather';
 import Nasa from './Nasa'
 import React, { useState, useEffect } from 'react';
@@ -20,6 +20,9 @@ function App() {
 
   return (
     <div>
+      <EventFetch lat={lat}
+     lon={lon}
+/>
       <div className='weather'>
       <Weather lat={lat}
      lon={lon}/> 
